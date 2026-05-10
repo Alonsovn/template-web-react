@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Button, Layout, message } from "antd";
 import type { FormProps } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { setUsername } from "../../features/auth/authSlice";
 import { useLoginMutation } from "../../features/auth/authApi";
@@ -69,6 +69,10 @@ const Login: React.FC = () => {
             rules={[{ required: true, message: "Please input your password!" }]}
           >
             <Input.Password placeholder="Password" className={styles.input} />
+          </Form.Item>
+
+          <Form.Item>
+            <Link to="/forgot-password">Forgot password?</Link>
           </Form.Item>
 
           <Form.Item>
