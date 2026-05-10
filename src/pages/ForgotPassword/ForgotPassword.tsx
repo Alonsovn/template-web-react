@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Input, Button, Layout, message } from "antd";
 import type { FormProps } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForgotPasswordMutation } from "../../features/auth/passwordApi";
 import styles from "./ForgotPassword.module.scss";
 
@@ -12,16 +12,18 @@ interface IForgotPasswordFormValues {
 }
 
 const ForgotPassword: React.FC = () => {
+  const navigate = useNavigate();
   const [forgotPassword, { isLoading }] = useForgotPasswordMutation();
 
   const onFinish: FormProps<IForgotPasswordFormValues>["onFinish"] = async (
     values,
   ) => {
     try {
-      await forgotPassword({ email: values.email }).unwrap();
-      message.success(
-        "If that email exists, a reset link has been sent.",
-      );
+      const data = await forgotPassword({
+        email: values.email,
+      }).unwrap();
+      message.success(data.message);
+      navigate(`/reset-password?token=${data.token}`);
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Request failed";
