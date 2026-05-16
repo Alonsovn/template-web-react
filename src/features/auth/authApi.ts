@@ -7,6 +7,7 @@ interface ILoginRequest {
 
 interface ILoginResponse {
   name: string;
+  token: string;
 }
 
 export const authApi = apiSlice.injectEndpoints({
