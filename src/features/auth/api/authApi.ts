@@ -1,4 +1,4 @@
-import { apiSlice } from "../../api/apiSlice";
+import { apiSlice } from "../../../shared/api/apiSlice";
 
 interface ILoginRequest {
   username: string;

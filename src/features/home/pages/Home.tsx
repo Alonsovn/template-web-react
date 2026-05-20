@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "antd";
 import { Link } from "react-router-dom";
-import { useAppSelector } from "../../store/hooks";
+import { useAppSelector } from '../../../shared/store/hooks';
 import styles from "./Home.module.scss";
 
 const { Header, Content } = Layout;

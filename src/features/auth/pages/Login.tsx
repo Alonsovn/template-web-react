@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "antd";
-import LoginForm from "../../features/auth/components/login-form/LoginForm";
+import LoginForm from '../ui/login-form/LoginForm';
 import styles from "./Login.module.scss";
 
 const { Header, Content } = Layout;

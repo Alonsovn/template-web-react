@@ -2,9 +2,9 @@ import React from "react";
 import { Form, Input, Button, message } from "antd";
 import type { FormProps } from "antd";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../../../store/hooks";
-import { useLoginMutation } from "../../authApi";
-import { setCredentials } from "../../authSlice";
+import { useAppDispatch } from "../../../../shared/store/hooks";
+import { useLoginMutation } from "../../api/authApi";
+import { setCredentials } from "../../model/authSlice";
 import styles from "./LoginForm.module.scss";
 
 export interface ILoginFormValues {
