@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useAppSelector } from "../store/hooks";
+import { useAppSelector } from "../shared/store/hooks";
 import { ROUTES } from "./routes";
 
 interface PrivateRouteProps {
