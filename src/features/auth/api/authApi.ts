@@ -1,4 +1,4 @@
-import { apiSlice } from "../../api/apiSlice";
+import { apiSlice } from "../../../shared/api/apiSlice";
 
 interface ILoginRequest {
   username: string;
@@ -7,6 +7,7 @@ interface ILoginRequest {
 
 interface ILoginResponse {
   name: string;
+  token: string;
 }
 
 export const authApi = apiSlice.injectEndpoints({
