@@ -1,0 +1,40 @@
+.page {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.content {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1677ff;
+}
+
+.title {
+  margin-bottom: 8px !important;
+}
+
+.subtitle {
+  font-size: 14px;
+}
